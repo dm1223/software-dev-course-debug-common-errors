@@ -26,7 +26,9 @@ Think about which debugging methods you found most useful and how you might appl
 
 console.log("Welcome to the bootcamp
 
-// What’s Wrong?
+This line is missing quotations and a parentheses at the end along with a semicolon. This is a syntax error. 
+
+  console.log("Welcome to the bootcamp");
 
 
 // Program B
@@ -39,8 +41,13 @@ for (let i = 0; i < numbers.length; i++) {
   console.log(doubled);
 }
 
-// What’s Wrong?
+The number 8 should be written instead of the word. This is a runtime error. 
 
+  let numbers = [2, 4, 8];
+for (let i = 0; i < numbers.length; i++) {
+  let doubled = numbers[i] * 2;
+  console.log(doubled);
+}
 
 
 // Program C (Logic Error)
@@ -60,3 +67,18 @@ function isPrime(num) {
 console.log(isPrime(7)); // Expected true but gets false
 
 // What’s Wrong?
+
+Wrong operator for if(num <2). It should be a === sign. i < num should have an = sign also. 
+  Proper code:
+
+function isPrime(num) {
+    if (num === 2) return false;
+    for (let i = 2; i = num; i++) {
+      if (num % i === 0) {
+        return true;
+    }
+}
+return false;
+}
+console.log(isPrime(7));
+
